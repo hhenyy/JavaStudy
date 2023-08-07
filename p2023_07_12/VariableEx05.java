@@ -1,0 +1,20 @@
+package p2023_07_12;
+//p69
+//boolean타입
+
+public class VariableEx05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean stop =true;
+		if(stop) {
+			System.out.println("중지합니다.");
+			
+		}else {
+			System.out.println("시작합니다.");
+		
+		}
+
+	}
+
+}
