@@ -31,7 +31,7 @@ public static void main(String[] args) {
       no = Integer.parseInt(br.readLine());     //테이블에서 삭제할 name 필드 값을 입력 받음
    
       // DELETE 쿼리문을 작성
-      sql  = "DELETE FROM customer WHERE no ="+no;     
+      sql  = "DELETE FROM customer WHERE no ="+no;  //삭제 실행후 select클래스에서 확인
       
       //Statement 객체의 executeUpdate(sql) 메서드를 이용해 
       int result=stmt.executeUpdate(sql) ;  //데이터베이스 파일에서 레코드 삭제시킴
@@ -54,4 +54,4 @@ public static void main(String[] args) {
       }
     }
   }
-} 
+}                         

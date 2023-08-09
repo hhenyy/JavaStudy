@@ -19,15 +19,19 @@ class  JDBC_Select{
     try{
       Class.forName(driver);
       con = DriverManager.getConnection(url, "scott", "tiger" );
-      stmt= con.createStatement();
+      System.out.println(con);
+      
+      stmt= con.createStatement(); //Statement()이용해서 stmt Statement객체 생성
+      System.out.println(stmt);
+      
       //---JDBC_Select 추가된 내용 -------
-      sql = "SELECT * FROM customer";
+      sql = "SELECT * FROM customer"; //select문은 where 조건절이 없음
       System.out.printf("번호 \t 이름 \t\t 이메일 \t\t 전화번호 \n");
       System.out.printf("-----------------------------------------------------------------\n");
       rs = stmt.executeQuery(sql);  //얻어진 레코드를 가져옴
 
     //boolean next(): 검색한 데이터를 1개씩 가져오는 역할
-      while( rs.next() ){ 
+      while( rs.next() ){  //true값받음
 		 no = rs.getInt("no"); 
          name = rs.getString("name");  
          email = rs.getString("email");     

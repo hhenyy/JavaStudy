@@ -22,7 +22,7 @@ public static void main(String[] args) {
      try{
       Class.forName(driver);
       con = DriverManager.getConnection(url, "scott", "tiger" );
-      stmt= con.createStatement();
+      stmt= con.createStatement(); //statement객체 생성 (혹은 preparedstatement 이용해서 객체 생성)
 
       //---JDBC_Insert 추가된 내용-------
       // 테이블에 추가할 내용을 도스 콘솔 창에서 사용자의 입력을 받도록 한다.
@@ -39,8 +39,9 @@ public static void main(String[] args) {
       
       // INSERT 쿼리문을 작성
       sql  = "UPDATE customer SET email='" + email;
-	  sql += "' , tel='" + tel + "', name='"+name+ "' WHERE no = "+ no;     
-      
+	  sql += "' , tel='" + tel + "', name='"+name+ "' WHERE no = "+ no;  //no값은 숫자데이터라 따옴표x //preparedstatement에서는 더 간결(데이터 많을떄)  
+      //+= <- 한줄로 쓰기길떄  
+	  
       //Statement 객체의 executeUpdate(sql) 메서드를 이용해 
       int result=stmt.executeUpdate(sql) ;  //데이터베이스 파일의 내용을 변경시킴
       if(result == 1){
