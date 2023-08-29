@@ -47,7 +47,7 @@ class JDBC_Insert02 {
 
 			// INSERT 쿼리문을 작성
 			sql = "INSERT into customer (no, name, email, tel, address, reg_date)";
-			sql += "values (customer_seq.nextval,?,?,?,?,sysdate)"; // sql문 두줄로 나눌때 +=
+			sql += "values (customer_no_seq.nextval,?,?,?,?,sysdate)"; // sql문 두줄로 나눌때 +=
 			// sysdate <-예외적으로 함수이지만 oracle에서는 ()가 없는 함수(mysql에서는 ()있음).timestamp객체 생성 대신
 			// 현재시간 직접 구하는 함수
 
