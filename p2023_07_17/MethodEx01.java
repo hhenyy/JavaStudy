@@ -14,7 +14,7 @@ public class MethodEx01 {
 	//return: 값을 돌려줘야한다.
 	
 	public static void check() {  //정적 메소드(static이 붙은 메소드)//메소드정의
-		System.out.println("메소드 호출 성공");        //사용자정의메소드에서는 public 생략가능, static은 생략불가
+		System.out.println("메소드 호출 성공");        
 		return;                    //return 생략가능
 	}
 	
